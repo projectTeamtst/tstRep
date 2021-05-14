@@ -140,7 +140,7 @@ def my_calories_view(request):
   recommendation = ""
   recommendation_less_list = ["Spożywasz zbyt dużo kalorii", "Zalecamy przejście na jedzenie o niższej kaloryczności", "Zwróć uwagę na to, co jesz, zawiera za dużo kalorii"]
   recommendation_normal_list = ["Spożywasz dostateczną ilość kalorii", "Doskonale przestrzegasz diety", "Czieszymy się że spożywasz odpowiednią liczbę kalorii"]
-  recommendation_more_list = ["Powinieneś jeść więcej wysokokalorycznych potraw", "Musisz spożywać więcej kalorii", "Zalecamy spożywanie większej ilości kalorii"]
+  recommendation_more_list = ["Powinieneś jeść więcej wysokokalorycznych potraw", "Musisz spożywać więcej kalorii", "Zalecamy spożywanie większej ilości kalorii", "Spożyłeś za mało kalorii an dziś"]
   daily_norm_min = 1700
   daily_norm_max = 2600
   user_calories = Calories.objects.filter(user=request.user).order_by("-date")
