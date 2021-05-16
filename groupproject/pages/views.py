@@ -14,8 +14,10 @@ def index(request):
   users = User.objects.all()
   trainers = Trainer.objects.all()
   articles = Article.objects.all()
+  section_id = Section.objects.get(name="Artykuły Pomocnicze").pk
+  specific_articles = Article.objects.filter(section=section_id)
   sections = Section.objects.all()
-  context = {'users': users, 'trainers': trainers, 'sections': sections, 'articles': articles}
+  context = {'users': users, 'trainers': trainers, 'sections': sections, 'articles': articles, 'specific_articles': specific_articles}
 
   return render(request, 'pages/index.html', context)
 

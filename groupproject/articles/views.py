@@ -10,8 +10,3 @@ def article_view(request, article_section):
   template = "articles/articles.html"
   return render(request, template, context)
 
-def article_index_view(request):
-  article = Article.objects.filter(section="Artykuły Pomocnicze")
-  context = {"article": article}
-  template = "articles/articles_index.html"
-  return render(request, template, context)
