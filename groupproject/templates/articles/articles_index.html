@@ -1,0 +1,12 @@
+{% load static %}
+{% block content %}
+<div class="flex col-md-10 mx-auto">
+    {% for a in specific_articles %}
+        <div class="flex">
+            <p class="h2 text-center">  {{ a.title }} </p>
+            <p class="h3 text-center">    {{ a.author }} </p>
+            <p class="h5 text-center">    {{ a.description }} </p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
